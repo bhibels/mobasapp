@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html manifest="08_digstory.appcache">
+<!--<html>-->
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=low-dpi"/>
+<title>MobAs</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" media="screen" />
+<link href="css/device.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+    <div id="screens" data-role="page"> 
+      <!-- insert screen content here -->
+      <div id="screenlogin" class="screencontent current l1">
+        <div class="content">
+          <div class="activity">
+            <p style="text-align:center;position:absolute;margin:0 auto;bottom:25%;width:100%"><a rel="external"  href="02_createprocess_index.html">Enter the Digital Story demonstration</a></p>
+          </div>
+        </div>
+      </div>
+      <div id='screenstudenthome' class='screencontent screenhome l1'>
+        <div class="content">
+          <div class="titlebar">
+            <div class="screentitle center">Mobile checklists for StudentWeb</div>
+          </div>
+          <div class="activity">
+            <p class="intro">Welcome <span class="firstname"></span>!</p>
+            <!-- assessment list container inserted here -->
+            <button data-role="none" class="btnattempts jumpto jumptoscreenstudentsattempts">My attempts</button>
+          </div>
+          <div class="helpers">
+            <p class="helper tohelptitleunits" title="Units">Select a unit from this list.</p>
+            <p class="helper tohelpbtnattempts" title="View your attempts">Select this button to view your attempts.</p>
+            <p class="helper tohelpbadge" title="Number of assessments">This number indicates the number of remaining assessments to be completed.</p>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screenstudentsattempts' class='screencontent l2'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">My attempts</div>
+          </div>
+          <div class="activity">
+            <div class="reveal">
+              <h4>Incomplete attempts</h4>
+              <div class="revealbody"> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 13</a> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 14</a> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 15</a> </div>
+            </div>
+            <div class="reveal">
+              <h4>Resubmit required</h4>
+              <div class="revealbody"> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 10</a> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 11</a> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 12</a> </div>
+            </div>
+            <div class="reveal">
+              <h4>Completed unsent attempt</h4>
+              <div class="revealbody"> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 7</a> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 8</a> <a class="jumpto jumptoscreenstudentassessmentstatus">Unit: Assessment task 9</a> </div>
+            </div>
+            <div class="reveal">
+              <h4>Not graded</h4>
+              <div class="revealbody"> <a class="jumpto jumptoscreenstudentassessmentreview">Unit: Assessment task 4</a> <a class="jumpto jumptoscreenstudentassessmentreview">Unit: Assessment task 5</a> <a class="jumpto jumptoscreenstudentassessmentreview">Unit: Assessment task 6</a> </div>
+            </div>
+            <div class="reveal">
+              <h4>Graded</h4>
+              <div class="revealbody"> <a class="jumpto jumptoscreenstudentassessmentreview">Unit: Assessment task 1</a> <a class="jumpto jumptoscreenstudentassessmentreview">Unit: Assessment task 2</a> <a class="jumpto jumptoscreenstudentassessmentreview">Unit: Assessment task 3</a> </div>
+            </div>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screenstudentassessments' class='screencontent l2'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">Assessments: Unit name</div>
+          </div>
+          <div class="activity">
+            <p class="intro">All available assessments for this unit.</p>
+            <!-- assessment list container inserted here -->
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screenstudentassessmentstatus' class='screencontent l3'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">Unit: Assessment title</div>
+          </div>
+          <div class="activity">
+            <p class="description">Assessment description here.</p>
+            <p class="description"><strong>Status</strong>
+            <div class="greybox statusbox">
+              <p class="status">Complete, waiting to send</span></p>
+              <button data-role="none" class="btnattempt btnnext">Edit attempt before sending</button>
+            </div>
+            <p><strong>Previous attempts</strong></p>
+            <table class="previousattempts">
+              <tr>
+                <td><p>2.</p></td>
+                <td><p><span class="datetime">22 Jan 2013, 11:09am</span>
+                    <button data-role="none" class="btnreview jumpto jumptoscreenstudentassessmentreview">Review</button>
+                  </p></td>
+              </tr>
+              <tr>
+                <td><p>1.</p></td>
+                <td><p><span class="datetime">21 Jan 2013, 1:45pm</span>
+                    <button data-role="none" class="btnreview jumpto jumptoscreenstudentassessmentreview">Review</button>
+                  </p></td>
+              </tr>
+            </table>
+          </div>
+          <div class="helpers">
+            <p class="helper tohelpbtnreview">Select this button to preview a previous attempt.</p>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screenstudentassessment' class='screencontent l4'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">Assessment title</div>
+          </div>
+          <div class="activity">
+            <div class="greybox" style="height:220px;">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p align="center"><strong>Activity content</strong></p>
+            </div>
+            <button data-role="none" class="btnreset">Reset</button>
+            <button data-role="none" class="btnsubmit" style="float:right">Submit</button>
+          </div>
+          <div class="helpers">
+            <p class="helper tohelpbtnreset">Select this button to reset this attempt.</p>
+            <p class="helper tohelpbtnsubmit">Select this button to submit this attempt.</p>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screenstudentassessmentreview' class='screencontent l4'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">Assessment title</div>
+          </div>
+          <div class="activity">
+            <div class="greybox" style="height:250px;">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p align="center"><strong>Activity content</strong></p>
+            </div>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screennotifications' class='screencontent l2'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">Notifications</div>
+          </div>
+          <div class="activity">
+            <div class="greybox" style="height:250px;">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p align="center"><strong>Notifications</strong></p>
+            </div>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <div id='screensettings' class='screencontent l2'>
+        <div class="content">
+          <div class="titlebar">
+            <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+            <div class="screentitle center">Settings</div>
+          </div>
+          <div class="activity">
+            <div class="greybox" style="height:250px;">
+              <td><button data-role="none" class="btnlogout">Logout</button></td>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p align="center"><strong>Settings</strong></p>
+            </div>
+          </div>
+          <div class="footerbar">
+            <button data-role="none" class="btnhome" title="Home">Home</button>
+            <button data-role="none" class="btnhelp" title="Help">Help</button>
+            <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+            <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+      <!-- end screen content --> 
+    </div>
+
+<script src="js/jquery-1.9.1.min.js"></script> 
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/IndexedDBShim.min.js"></script>
+<!--<script src="js/indexedDB.polyfill.js"></script>-->
+<script src="js/jquery.indexeddb.js"></script>
+<script src="js/indexeddb.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/mobas-moodle-connect.js"></script>
+<script src="js/wireframe-functions.js"></script>
+<script src="js/00_container.js"></script>
+</body>
+</html>

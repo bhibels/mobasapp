@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=low-dpi"/>
+<title>2. Third party report</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" media="screen" />
+<link href="css/device.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+
+  
+
+</head>
+<body>
+
+    <div id="screens" data-role="page">
+      <!-- insert screen content here -->
+      <div id="screenmain" class="screencontent current l1"><div class="content">
+  <div class="titlebar">
+    <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+    <div class="screentitle center">Unit: Assessment title</div>
+    <button data-role="none" class="btnarrow btnright btnpreview" title="Preview"><span>Preview</span></button>
+  </div>
+  <div class="activity">
+    <p class="description">Description here</p>
+    <div class="tasks">
+      <p><strong>Tasks to be completed</strong></p>
+      <ul class="items" title="Task Xx: Name of task">
+        <li class="item">
+          <input type="text" value="Task 1: Name of task"/>
+        </li>
+      </ul>
+    </div>
+    <button data-role="none" class="btnadditem">Add task</button>
+    <button data-role="none" class="btnsupervisor jumpto jumptoscreensupervisor">Workplace supervisor declaration</button>
+    <button data-role="none" class="btnsignstudent jumpto jumptoscreensignstudent">Student declaration</button>
+  </div>
+  <div class="helpers">
+    <p class="helper tohelpbtnadditem">Select this button to add tasks.</p>
+    <p class="helper tohelpbtnback">Select this button to save and go back.</p>
+    <p class="helper tohelpbtnpreview">Select this button to preview then submit your response.</p>
+  </div>
+  <div class="footerbar">
+    <button data-role="none" class="btnhelp" title="Help">Help</button>
+    <button data-role="none" class="btnedit">Edit</button>
+  </div>
+  <div class="shadow"></div>
+</div></div>
+      <div id='screensupervisor' class='screencontent l2'><div class="content">
+  <div class="titlebar">
+    <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+    <div class="screentitle center">Unit: Assessment title</div>
+  </div>
+  <div class="activity">
+	<p><strong>Supervisor details</strong></p>
+    <input type="text" class="supervisorname" value="Supervisor name"/>
+    <input type="text" class="supervisorrole" value="Supervisor role"/>
+    <input type="text" class="workplacename" value="Workplace name"/>
+    <input type="text" class="workplaceaddress" value="Workplace address"/>
+    <input type="tel" class="contactnumber" value="Contact number"/>
+    <button data-role="none" class="btnsignsupervisor jumpto jumptoscreensignsupervisor">Sign here</button>
+    <p class="date">Date when ALL tasks were completed: </p>
+
+  </div>
+  <div class="helpers">
+      <p class="helper tohelpbtnsignsupervisor triangle-border left">Select this to sign.</p>
+  </div>
+  <div class="footerbar">
+    <button data-role="none" class="btnhelp" title="Help">Help</button>
+  </div>
+  <div class="shadow"></div>
+</div></div>
+      <div id='screensignsupervisor' class='screencontent l3'><div class="content">
+  <div class="titlebar">
+    <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+    <div class="screentitle center">Unit: Assessment title</div>
+  </div>
+  <div class="activity">
+    <p><strong>Supervisor signature</strong></p>
+    <p class="description">Sign in the box below.</p>
+    <div id="signaturesupervisor" class="signature"></div>
+    <p class="date">Date: </p>
+  </div>
+  <div class="helpers">
+    <p class="helper tohelpsignature">Sign in the box using your finger.</p>
+  </div>
+  <div class="footerbar">
+    <button data-role="none" class="btnhelp" title="Help">Help</button>
+  </div>
+  <div class="shadow"></div>
+</div></div>
+      <div id='screensignstudent' class='screencontent l2'><div class="content">
+  <div class="titlebar">
+    <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+    <div class="screentitle center">Unit: Assessment title</div>
+  </div>
+  <div class="activity">
+    <p><strong>Student signature</strong></p>
+    <p class="description">Sign in the box below.</p>
+    <div id="signaturestudent" class="signature"></div>
+    <p class="date">Date: </p>
+  </div>
+  <div class="helpers">
+    <p class="helper tohelpsignature">Sign in the box using your finger.</p>
+  </div>
+  <div class="footerbar">
+    <button data-role="none" class="btnhelp" title="Help">Help</button>
+  </div>
+  <div class="shadow"></div>
+</div></div>
+      <div id='screenpreview' class='screencontent l2'><div class="content">
+  <div class="titlebar">
+    <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+    <div class="screentitle center">Unit: Assessment title</div>
+  </div>
+  <div class="activity">
+    <button data-role="none" class="btnsubmit">Submit</button>
+  </div>
+  <div class="helpers">
+    <p class="helper tohelpbtnback">Select this button to continue editing.</p>
+    <p class="helper tohelpbtnsubmit triangle-border left">Select this button to submit your response.</p>
+  </div>
+  <div class="footerbar">
+    <button data-role="none" class="btnhelp" title="Help">Help</button>
+  </div>
+  <div class="shadow"></div>
+</div></div>
+      <!-- end screen content -->
+    </div>
+          
+
+<script src="js/jquery-1.9.0.js"></script>
+<script src="js/jquery-ui-1.10.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jSignature.min.js"></script>
+<script src="js/wireframe-functions.js"></script>
+<script src="js/05_thirdpartyreport.js"></script>
+</body>
+</html>

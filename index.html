@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<!--<html manifest="mobas.appcache">-->
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="css/images/icon_mobas.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=low-dpi"/>
+<title>Mobas</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" media="screen" />
+<link href="css/device.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div id="screens" data-role="page"> 
+  <!-- insert screen content here -->
+  <div data-role="content" id="screenloading" class="screencontent current l1">
+    <div class="content">
+      <div class="loading">
+        <p>loading Mobas...</p>
+        <p><img src='css/images/ajax-loader_black.gif' /></p>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" id="screenlogin" class="screencontent l1">
+    <div class="content">
+      <div class="activity">
+        <form id="login">
+          <div class="greybox">
+            <div class="row">
+              <div class="labelUser">
+                <label for="moodleurl">Moodle URL:</label>
+              </div>
+              <div class="user">
+               <input type="text" id="moodleurl" class="moodleurl" value="http://moodledevt.bhtafe.edu.au/bhidevt"/>
+               <!--<input type="text" id="moodleurl" class="moodleurl" value=""/>-->
+              </div>
+            </div>
+            <div class="row">
+              <div class="labelUser">
+                <label for="moodleusername">Username:</label>
+              </div>
+              <div class="user">
+               <!--<input type="text" id="moodleusername" class="moodleusername" value="bhi"/>-->
+               <input type="text" id="moodleusername" class="moodleusername" value="bhi1054614"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="labelUser">
+                <label for="moodlepassword">Password:</label>
+              </div>
+              <div class="user">
+                <!--<input type="password" id="moodlepassword" class="moodlepassword" value="" />-->
+                <input type="password" id="moodlepassword" class="moodlepassword" value=19801129 />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <button data-role="none" id="btnlogin">Login</button>
+              </div>
+            </div>
+          </div>
+          <div class="statusbox"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id='screenstudenthome' class='screencontent screenhome l1'>
+    <div class="content">
+      <div class="titlebar">
+        <div class="screentitle center">Mobile checklists for StudentWeb</div>
+      </div>
+      <div class="activity">
+        <p class="intro">Welcome <span class="firstname"></span>!</p>
+        <!-- assessment list container inserted here
+        <button data-role="none" class="btnattempts jumpto jumptoscreenstudentsattempts">My attempts</button> -->
+      </div>
+      <div class="helpers">
+        <p class="helper tohelptitleunits" title="Units">Select a unit from this list.</p>
+        <p class="helper tohelpbadge" title="Number of assessments">This number indicates the number of remaining assessments to be completed.</p>
+        <p class="helper tohelpbtnnotifications" title="Notifications">Select this button to view assessments due in the next 7 days.</p>
+		<p class="helper tohelpbtnsettings" title="Settings">Select this button to view your connection status and to logout.</p>
+      </div>
+      <div class="footerbar">
+        <button data-role="none" class="btnhelp" title="Help">Help</button>
+        <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+        <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div id='screenstudentassessments' class='screencontent l2'>
+    <div class="content">
+      <div class="titlebar">
+        <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+        <div class="screentitle center">Assessments: Unit name</div>
+      </div>
+      <div class="activity">
+        <p class="intro">All available assessments for this unit.</p>
+        <!-- assessment list container inserted here --> 
+      </div>
+      <div class="helpers">
+        <p class="helper tohelpassessments" title="Units">Select an assessment from this list.</p>
+        <p class="helper tohelpbtnnotifications" title="Notifications">Select this button to view assessments due in the next 7 days.</p>
+		<p class="helper tohelpbtnsettings" title="Settings">Select this button to view your connection status and to logout.</p>
+      </div>
+      <div class="footerbar">
+        <button data-role="none" class="btnhome" title="Home">Home</button>
+        <button data-role="none" class="btnhelp" title="Help">Help</button>
+        <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+        <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div id='screenstudentassessmentstatus' class='screencontent l3' data-role="page">
+    <div class="content">
+      <div class="titlebar">
+        <button data-role="none" class="btnarrow btnleft btnback" title="Back">Back</button>
+        <div class="screentitle center">Unit: Assessment title</div>
+      </div>
+      <div class="activity">
+        <p class="assessmentType">Assessment type here.</p>
+        <p class="description">Assessment description here.</p>
+        <p class="statusTitle"><strong>Status</strong>
+        <div class="greybox statusbox">
+          <!--<p class="status">Complete, waiting to send</span></p>
+          <button data-role="none" class="btnattempt btnnext">Edit attempt before sending</button>-->
+        </div>
+      </div>
+      <div class="helpers">
+        <p class="helper tohelpbtnnotifications" title="Notifications">Select this button to view assessments due in the next 7 days.</p>
+		<p class="helper tohelpbtnsettings" title="Settings">Select this button to view your connection status and to logout.</p>
+      </div>
+      <div class="footerbar">
+        <button data-role="none" class="btnhome" title="Home">Home</button>
+        <button data-role="none" class="btnhelp" title="Help">Help</button>
+        <button data-role="none" class="btnnotifications" title="Notifications">Notifications</button>
+        <button data-role="none" class="btnsettings" title="Settings">Settings</button>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div id='screennotifications' class='notificationsScreen' title="Notifications">
+
+  </div>
+  <div id='screensettings' class='settingsScreen' title="Settings">
+	<p class="user"></p>
+	<p class="connection"></p>
+    <p align="center">
+      <button data-role="none" class="btnlogout">Logout</button>
+    </p>
+  </div>
+  <!-- end screen content --> 
+</div>
+<script src="js/jquery-1.9.1.min.js"></script> 
+<script src="js/jquery.mobile-1.3.1.min.js"></script> 
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script> 
+<script src="js/jquery.ui.touch-punch.min.js"></script> 
+<script src="js/IndexedDBShim.min.js"></script>  
+<script src="js/jquery.indexeddb.js"></script> 
+<script src="js/indexeddb.js"></script> 
+<script src="js/jquery.mousewheel.min.js"></script> 
+<script src="js/wireframe-functions.js"></script> 
+<script src="js/00_container.js"></script>
+<script src="js/mobas-moodle-connect.js"></script> 
+</body>
+</html>
